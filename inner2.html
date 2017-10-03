@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Binary</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="font-awesome.min.css">
+	<style type="text/css">
+#whole {
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.9 );
+			margin: 0px;
+			padding: 0px;
+			z-index: 100;
+			position: fixed;
+			top: 0px;
+			right: 0px;
+		}
+#whole2 {
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.9 );
+			margin: 0px;
+			padding: 0px;
+			z-index: 100;
+			position: fixed;
+			top: 0px;
+			right: 0px;
+		}
+		#task {
+			margin: auto;
+			width: 60%;
+			height: 260px;
+			padding: 60px;
+			font-size: 60px;
+			background: #c3c3ff;
+			position: absolute;
+			top: 50%;	
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 5%;
+		}
+		#win {
+			margin: auto;
+			color: white;
+			width: 50%;
+			height: 250px;
+			padding: 60px;
+			font-size: 80px;
+			background: #095ffb;
+			position: absolute;
+			top: 50%;	
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 75%;
+		}
+
+	    body {
+	    	background: url('logo-nav.png') no-repeat;
+	    	position: left top;
+	    	user-select: none;
+	    	cursor: pointer;
+	    	}
+        i { 
+        	cursor: pointer; color: rgb(45, 50, 100);
+        }
+
+		#number7 {
+			width: 120px;
+			height: 240px;
+			background: rgb(140, 200, 255);
+			display: inline-block;
+			border-radius: 50%;
+		}
+		#number6 {
+			width: 120px;
+			height: 240px;
+			background: rgb(140, 200, 255);
+			display: inline-block;
+			border-radius: 50%;
+		}
+		#number5 {
+			width: 120px;
+			height: 240px;
+			background: rgb(140, 200, 255);
+			display: inline-block;
+			border-radius: 50%;
+		}
+		#number4 {
+			width: 120px;
+			height: 240px;
+			background: rgb(140, 200, 255);
+			display: inline-block;
+			border-radius: 50%;
+		}
+		#number3 {
+			width: 120px;
+			height: 240px;
+			background: rgb(140, 200, 255);
+			display: inline-block;
+			border-radius: 50%;
+		}
+		#number2 {
+			width: 120px;
+			height: 240px;
+			background: rgb(140, 200, 255);
+			display: inline-block;
+			border-radius: 50%;
+		}
+		#number1 {
+			width: 120px;
+			height: 240px;
+			background: rgb(140, 200, 255);
+			display: inline-block;
+			border-radius: 50%;
+		}
+		#number0 {
+			width: 120px;
+			height: 240px;
+			background: rgb(140, 200, 255);
+			display: inline-block;
+			border-radius: 50%;
+		}
+		#wrapper {
+			height: 100%;
+			width: 100%;
+			padding: 80px 0;
+			margin: auto;
+			font-family: "Trebuchet MS"
+		}
+		#value7 {
+			font-size: 116px;
+		}
+		#value6 {
+			font-size: 116px;
+		}
+		#value5 {
+			font-size: 116px;
+		}
+		#value4 {
+			font-size: 116px;
+		}
+		#value3 {
+			font-size: 116px;
+		}
+		#value2 {
+			font-size: 116px;
+		}
+		#value1 {
+			font-size: 116px;
+		}
+		#value0 {
+			font-size: 116px;
+		}
+		#result {
+			margin: auto;
+			width: 300px;
+			height: 120px;
+			background: rgb(112, 249, 118);
+			font-size: 100px;
+			border-radius: 0px 65px;
+			font-family: "Trebuchet MS"
+		}
+		div > div {
+			margin: 0px 5px;
+		}
+		#special {
+			position: fixed;
+			bottom: 20px;
+			left: 5px;
+			height: 120px;
+			width: 270px;
+			background: lime;
+			border-radius: 5%;
+			font-size: 18px;
+		}
+		@media (max-width: 1200px){
+			#number0,#number1,#number2,#number3,
+			#number4,#number5,#number6,#number7{
+				width: 90px;
+				height: 240px;
+			}
+		}
+	</style>
+	<script type="text/javascript">
+
+		function upp7() {
+			document.getElementById('value7').innerHTML = "1";
+			document.getElementById('value7').value = "1";
+		}
+		function upp6() {
+			document.getElementById('value6').innerHTML = "1";
+			document.getElementById('value6').value = "1";
+		}
+		function upp5() {
+			document.getElementById('value5').innerHTML = "1";
+			document.getElementById('value5').value = "1";
+		}
+		function upp4() {
+			document.getElementById('value4').innerHTML = "1";
+			document.getElementById('value4').value = "1";
+		}
+		function upp3() {
+			document.getElementById('value3').innerHTML = "1";
+			document.getElementById('value3').value = "1";
+		}
+		function upp2() {
+			document.getElementById('value2').innerHTML = "1";
+			document.getElementById('value2').value = "1";
+		}
+		function upp1() {
+			document.getElementById('value1').innerHTML = "1";
+			document.getElementById('value1').value = "1";
+		}
+		function upp0() {
+			document.getElementById('value0').innerHTML = "1";
+			document.getElementById('value0').value = "1";
+		}
+		function down7() {
+			document.getElementById('value7').innerHTML = "0";
+			document.getElementById('value7').value = "0";
+		}
+		function down6() {
+			document.getElementById('value6').innerHTML = "0";
+			document.getElementById('value6').value = "0";
+		}
+		function down5() {
+			document.getElementById('value5').innerHTML = "0";
+			document.getElementById('value5').value = "0";
+		}
+		function down4() {
+			document.getElementById('value4').innerHTML = "0";
+			document.getElementById('value4').value = "0";
+		}
+		function down3() {
+			document.getElementById('value3').innerHTML = "0";
+			document.getElementById('value3').value = "0";
+		}
+		function down2() {
+			document.getElementById('value2').innerHTML = "0";
+			document.getElementById('value2').value = "0";
+		}
+		function down1() {
+			document.getElementById('value1').innerHTML = "0";
+			document.getElementById('value1').value = "0";
+		}
+		function down0() {
+			document.getElementById('value0').innerHTML = "0";
+			document.getElementById('value0').value = "0";
+		}
+		function rem2(){
+			document.getElementById('whole').style.display = 'none';
+		}
+		function serious(){
+			document.getElementById("down7").onclick = function(){
+				alert('Don\'nt Cheat');
+			}
+			document.getElementById("down6").onclick = function(){
+				alert('Really? You are Serious?');
+			}
+			document.getElementById("down5").onclick = function(){
+				alert('Wow, I explained everything');
+			}
+			document.getElementById("down4").onclick = function(){
+				alert('Play Kid one next time');
+			}
+			document.getElementById("down3").onclick = function(){
+				alert('You are a good game hacker');
+			}
+			document.getElementById("down2").onclick = function(){
+				alert('Are you serious?');
+			}
+			document.getElementById("down1").onclick = function(){
+				alert('Did you know that you ca\'nt go back');
+			}
+			document.getElementById("down0").onclick = function(){
+				alert('You can\'t wint it!');
+			}
+			document.getElementById("down7").innerHTML = "&nbsp;";
+			document.getElementById("down6").innerHTML = "&nbsp;";
+			document.getElementById("down5").innerHTML = "&nbsp;";
+			document.getElementById("down4").innerHTML = "&nbsp;";
+			document.getElementById("down3").innerHTML = "&nbsp;";
+			document.getElementById("down2").innerHTML = "&nbsp;";
+			document.getElementById("down1").innerHTML = "&nbsp;";
+			document.getElementById("down0").innerHTML = "&nbsp;";
+		}
+	</script>
+</head>
+<body align="center">
+				<div id="wrapper">
+				<div id="whole" align="center">
+				  	<div id="task" >
+				  	<span onclick="rem2();" style="position: absolute; top: 10px; right: 18px; color: red; font-size: 40px; display: inline-block; cursor: pointer;">X</span>
+				  		GENERATE THE NUMBER 
+				  		<div id="randomNumber" style="color: lime; font-size: 140px;"></div>
+				  		<div onclick="rem2();" style="padding: 20px 30px; background: rgb(140, 140, 255); width: 100px; height: 40px; line-height: 0.7;display: inline-block; border-radius: 20%; cursor: pointer;">Kid's</div> <div onclick="rem2(); serious();" style="padding: 20px 30px; background: rgb(140, 140, 255);display: inline-block; width: 180px; height: 40px; line-height: 0.7; border-radius: 20%; cursor: pointer;">Serious</div>
+				  	</div>
+				</div>
+				<div id="whole2" style="display: none;">
+					<div id="win" style="text-align: center;line-height: 3; text-indent: -16px;">
+				  		CONGRATULATIONS!
+				  	<p style="font-size: 24px;margin: 0;color: lightgrey;" onclick="window.location.reload()">PLAY AGAIN</p>
+				  	</div>
+				</div>
+		 <div id="number7">
+		 	<div id="upp" onclick="upp7();"><i class="fa fa-chevron-up fa-3x"></i></div>
+		 	<div id="value7" value="0">0</div>
+		 	<div id="down7" onclick="down7();"><i class="fa fa-chevron-down fa-3x"></i></div>
+		 </div>
+		 <div id="number6">
+		 	<div id="upp" onclick="upp6();"><i class="fa fa-chevron-up fa-3x"></i> </div>
+		 	<div id="value6" value="0">0</div>
+		 	<div id="down6" onclick="down6();"><i class="fa fa-chevron-down fa-3x"></i></div>
+		 </div>
+		 <div id="number5" >
+		 	<div id="upp" onclick="upp5();"><i class="fa fa-chevron-up fa-3x"></i> </div>
+		 	<div id="value5" value="0">0</div>
+		 	<div id="down5" onclick="down5();"><i class="fa fa-chevron-down fa-3x"></i> </div>
+		 </div>
+		 <div id="number4">
+		 	<div id="upp" onclick="upp4();"><i class="fa fa-chevron-up fa-3x"></i></div>
+		 	<div id="value4" value="0">0</div>
+		 	<div id="down4" onclick="down4();"><i class="fa fa-chevron-down fa-3x"></i> </div>
+		 </div>
+		 <div id="number3">
+		 	<div id="upp" onclick="upp3();"><i class="fa fa-chevron-up fa-3x"></i> </div>
+		 	<div id="value3" value="0">0</div>
+		 	<div id="down3" onclick="down3();"><i class="fa fa-chevron-down fa-3x"></i> </div>
+		 </div>
+		 <div id="number2">
+		 	<div id="upp" onclick="upp2();"><i class="fa fa-chevron-up fa-3x"></i></div>
+		 	<div id="value2" value="0" >0</div>
+		 	<div id="down2" onclick="down2();"><i class="fa fa-chevron-down fa-3x"></i></div>
+		 </div>
+		 <div id="number1">
+		 	<div id="upp" onclick="upp1();"><i class="fa fa-chevron-up fa-3x"></i> </div>
+		 	<div id="value1" value="0" >0</div>
+		 	<div id="down1" onclick="down1();"><i class="fa fa-chevron-down fa-3x"></i> </div>
+		 </div>
+		 <div id="number0" >
+		 	<div id="upp" onclick="upp0();"><i class="fa fa-chevron-up fa-3x"></i></div>
+		 	<div id="value0" value="0">0</div>
+		 	<div id="down0" onclick="down0();"><i class="fa fa-chevron-down fa-3x"></i> </div>
+		 </div>
+</div>
+<br>
+<hr style="margin: auto; width: 40%; border:3px solid rgb(255, 123, 112);">
+<br>
+<br>
+<br>
+<div id="result">145</div>
+<div id="special"><span style="color: red; cursor: pointer; position: absolute; top: 2px; right: 5px; font-family: 'Trebuchet MS'; font-weight: bold;" onclick="rem()">X</span>
+<p style="color: blue; text-align: left; text-indent: 10px;">App Name: <span style="color: black; background: white;">&nbsp;&nbsp;Binary-Decimal&nbsp;&nbsp;</span></p>
+<p style="color: blue;  text-align: left; text-indent: 10px;">Made By: <span style="color: black; background: white;">&nbsp;&nbsp;&nbsp;&nbsp;Azimjon Pulatov&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p style="color: green;">2017/19/03 &copy; Spider.uz</p>
+</div>
+<script type="text/javascript">
+
+document.getElementById('randomNumber').innerHTML = Math.floor(Math.random()*254+1);
+
+upp0();
+upp1();
+upp2();
+upp3();
+upp4();
+upp5();
+upp6();
+upp7();
+
+down0();
+down1();
+down2();
+down3();
+down4();
+down5();
+down6();
+down7();
+ setInterval(function(){
+document.getElementById('result').innerHTML = Number(value0.value) + Number(value1.value)*2 + Number(value2.value)*4 + Number(value3.value)*8 + Number(value4.value)*16 + Number(value5.value)*32 + Number(value6.value)*64 + Number(value7.value)*128;
+ }, 100);
+ setInterval(function(){
+ 		if (Number(document.getElementById('randomNumber').innerText) == Number(document.getElementById('result').innerText)) {
+			document.getElementById('whole2').style.display = "block";
+			} }, 2000 
+ );
+
+ function rangli() {
+		var rang = '0123456789abcdef';
+		var color = '#0956';
+
+		for (var i = 0; i < 2; i++) {
+			color += rang[Math.floor(Math.random()*8)];
+		}
+		return color;
+	}
+setInterval(function(){document.getElementById('win').style.background = rangli();}, 100);
+
+ function rem() {
+ 	document.getElementById('special').style.display = "none";
+ }
+ </script>
+</body>
+</html>

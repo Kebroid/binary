@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>PoP</title>
+	<script type="text/javascript">
+		function setTime(){
+			var now = new Date();
+			return now;
+		}
+		function Time(){
+			document.getElementById('demo').innerHTML = setTime().getTime();
+		}
+		function Time2(){
+			document.getElementById('demo2').innerHTML = setTime().getTime();
+		}
+setInterval( function(){
+document.getElementById('rezt').innerHTML = Math.round(Number(document.getElementById('demo2').innerText - document.getElementById('demo').innerText)/1000);
+}, 100);
+
+
+		
+
+	</script>
+</head>
+<body>
+  <button onclick="Time()">Time 1</button>
+  <button onclick="Time2()">Time 2</button>
+ <div id="demo"></div>
+ <div id="demo2"></div>
+ <div id="rezt"></div>
+</body>
+</html>
